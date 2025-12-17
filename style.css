@@ -174,9 +174,14 @@ select {
 }
 
 .navigation__cta-pfp {
+  border-radius: 50%;
   img {
     max-width: 25px;
   }
+}
+
+.navigation__cta-pfp:hover {
+  outline: 1px solid var(--orange);
 }
 
 /* Galery */
@@ -587,7 +592,7 @@ select {
   }
 
   .modal {
-    display: block;
+    display: none;
     position: fixed;
     top: 50%;
     left: 50%;
