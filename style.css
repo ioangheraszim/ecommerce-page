@@ -154,8 +154,23 @@ select {
 .navigation__cta {
   margin-right: 1.55rem;
 }
+
 .navigation__cta-cart {
   padding: 1.25rem;
+  position: relative;
+}
+
+.cart-badge {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: var(--orange);
+  color: var(--white);
+  font-size: 0.5rem;
+  font-weight: 700;
+  border-radius: 50%;
+  padding: 0.2rem 0.5rem;
+  display: none;
 }
 
 .navigation__cta-pfp {
@@ -386,6 +401,24 @@ select {
   display: none;
 }
 
+.modal__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease-in-out;
+  z-index: 999;
+}
+
+.modal__overlay--active {
+  opacity: 1;
+  pointer-events: all;
+}
+
 @media (min-width: 920px) {
   .container {
     width: min(100% - 2rem, 1110px);
@@ -554,16 +587,15 @@ select {
   }
 
   .modal {
-    display: none;
+    display: block;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1000;
-    background-color: var(--white);
-    padding: 2rem;
+    background: transparent;
+    padding: 1rem;
     border-radius: 1rem;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   }
 
   .modal__content {
@@ -581,20 +613,29 @@ select {
   }
 
   .modal__close {
-    top: 1rem;
-    right: 1rem;
+    top: 0%;
+    right: 0%;
+    padding: 1.25rem 1.25rem;
+    background-color: var(--white);
+    border-radius: 50%;
   }
 
   .modal__prev {
     top: 50%;
-    left: 1rem;
+    left: -15px;
+    background-color: var(--white);
+    padding: 1rem 1.25rem;
+    border-radius: 50%;
     transform: translateY(-50%);
   }
 
   .modal__next {
     top: 50%;
-    right: 1rem;
+    right: -15px;
     transform: translateY(-50%);
+    background-color: var(--white);
+    padding: 1rem 1.25rem;
+    border-radius: 50%;
   }
 
   /* Navigation Cart */
@@ -602,5 +643,10 @@ select {
   .navigation__cart {
     transform: translate(50%, 30%);
     width: 375px;
+  }
+
+  .cart-badge {
+    top: -10px;
+    right: -10px;
   }
 }

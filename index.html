@@ -16,111 +16,170 @@
   <body>
     <header class="container">
       <!-- Navbar -->
-      <nav class="navigation">
+      <nav class="navigation" aria-label="Main navigation">
         <div class="navigation__links">
           <div class="navigation__menus">
-            <button class="navigation__menu navigation__menu-open">
-              <img src="./assets/images/icon-menu.svg" alt="" />
+            <button
+              class="navigation__menu navigation__menu-open"
+              aria-label="Open menu"
+            >
+              <img
+                src="./assets/images/icon-menu.svg"
+                alt=""
+                aria-hidden="true"
+              />
             </button>
-            <a href="#"><img src="./assets/images/logo.svg" alt="logo" /></a>
+            <a href="#" aria-label="Homepage">
+              <img src="./assets/images/logo.svg" alt="Sneaker Company logo" />
+            </a>
           </div>
-          <ul class="navigation__links-wrap">
-            <button class="navigation__menu navigation__menu-close">
-              <img src="./assets/images/icon-close.svg" alt="" />
+          <ul class="navigation__links-wrap" role="menubar">
+            <button
+              class="navigation__menu navigation__menu-close"
+              aria-label="Close menu"
+            >
+              <img
+                src="./assets/images/icon-close.svg"
+                alt=""
+                aria-hidden="true"
+              />
             </button>
-            <li class="navigation__link">
-              <a class="navigation__link-anchor" href="#">Collections</a>
+            <li class="navigation__link" role="none">
+              <a class="navigation__link-anchor" href="#" role="menuitem"
+                >Collections</a
+              >
             </li>
-            <li class="navigation__link">
-              <a class="navigation__link-anchor" href="#">Men</a>
+            <li class="navigation__link" role="none">
+              <a class="navigation__link-anchor" href="#" role="menuitem"
+                >Men</a
+              >
             </li>
-            <li class="navigation__link">
-              <a class="navigation__link-anchor" href="#">Women</a>
+            <li class="navigation__link" role="none">
+              <a class="navigation__link-anchor" href="#" role="menuitem"
+                >Women</a
+              >
             </li>
-            <li class="navigation__link">
-              <a class="navigation__link-anchor" href="#">About</a>
+            <li class="navigation__link" role="none">
+              <a class="navigation__link-anchor" href="#" role="menuitem"
+                >About</a
+              >
             </li>
-            <li class="navigation__link">
-              <a class="navigation__link-anchor" href="#">Contact</a>
+            <li class="navigation__link" role="none">
+              <a class="navigation__link-anchor" href="#" role="menuitem"
+                >Contact</a
+              >
             </li>
           </ul>
         </div>
         <!-- Cart and Profile -->
         <div class="navigation__cta">
-          <a class="navigation__cta-cart" href="#"
-            ><img src="./assets/images/icon-cart.svg" alt="cart"
-          /></a>
-          <a href="#" class="navigation__cta-pfp"
-            ><img src="./assets/images/image-avatar.png" alt="profile image"
-          /></a>
+          <a class="navigation__cta-cart" href="#" aria-label="Shopping cart">
+            <img
+              src="./assets/images/icon-cart.svg"
+              alt=""
+              aria-hidden="true"
+            />
+            <span id="cart-badge" class="cart-badge" aria-live="polite">0</span>
+          </a>
+          <a href="#" class="navigation__cta-pfp" aria-label="Profile">
+            <img
+              src="./assets/images/image-avatar.png"
+              alt="User profile image"
+            />
+          </a>
         </div>
-        <div class="navigation__cart">
+        <div
+          class="navigation__cart"
+          role="region"
+          aria-label="Shopping cart details"
+        >
           <div class="navigation__cart-title">
             <p class="cart-title">Cart</p>
           </div>
           <div class="navigation__cart-product">
             <div class="cart__product">
-              <img src="./assets/images/image-product-1-thumbnail.jpg" alt="" />
+              <img
+                src="./assets/images/image-product-1-thumbnail.jpg"
+                alt="Fall Limited Edition Sneakers thumbnail"
+              />
               <div class="cart__description-wrap">
                 <p class="cart__desc">
                   Fall Limited Edition Sneakers $125.00 x
-                  <span class="cart__qty">3</span>
-                  <span class="cart__total">$375.00</span>
+                  <span class="cart__qty" aria-label="Quantity">3</span>
+                  <span class="cart__total" aria-label="Total price"
+                    >$375.00</span
+                  >
                 </p>
               </div>
-              <button class="cart__delete">
-                <img src="./assets/images/icon-delete.svg" alt="" />
+              <button class="cart__delete" aria-label="Remove item from cart">
+                <img
+                  src="./assets/images/icon-delete.svg"
+                  alt=""
+                  aria-hidden="true"
+                />
               </button>
             </div>
-            <button class="content__btn-cart">Checkout</button>
-            <p class="cart__empty">Cart Empty</p>
+            <button
+              id="checkout-btn"
+              class="content__btn-cart"
+              aria-label="Proceed to checkout"
+            >
+              Checkout
+            </button>
+            <p class="cart__empty" role="status">Cart Empty</p>
           </div>
         </div>
       </nav>
-      <div class="navigation__overlay"></div>
+      <div class="navigation__overlay" aria-hidden="true"></div>
     </header>
     <main class="container product">
-      <!-- Galery with product images -->
-      <section class="gallery">
+      <!-- Gallery with product images -->
+      <section class="gallery" aria-label="Product image gallery">
         <img
           class="gallery__main"
           src="./assets/images/image-product-1.jpg"
-          alt=""
+          alt="Main product image: Fall Limited Edition Sneakers"
         />
 
-        <button class="gallery__prev">
-          <img src="./assets/images/icon-previous.svg" alt="" />
+        <button class="gallery__prev" aria-label="Previous image">
+          <img
+            src="./assets/images/icon-previous.svg"
+            alt=""
+            aria-hidden="true"
+          />
         </button>
-        <button class="gallery__next">
-          <img src="./assets/images/icon-next.svg" alt="" />
+        <button class="gallery__next" aria-label="Next image">
+          <img src="./assets/images/icon-next.svg" alt="" aria-hidden="true" />
         </button>
-        <div class="gallery__list">
+        <div class="gallery__list" role="list">
           <img
             class="gallery__mini"
             src="./assets/images/image-product-1.jpg"
-            alt=""
+            alt="Thumbnail image 1"
           />
           <img
             class="gallery__mini"
             src="./assets/images/image-product-2.jpg"
-            alt=""
+            alt="Thumbnail image 2"
           />
           <img
             class="gallery__mini"
             src="./assets/images/image-product-3.jpg"
-            alt=""
+            alt="Thumbnail image 3"
           />
           <img
             class="gallery__mini"
             src="./assets/images/image-product-1.jpg"
-            alt=""
+            alt="Thumbnail image 4"
           />
         </div>
       </section>
       <!-- Product Description -->
-      <section class="content">
+      <section class="content" aria-labelledby="product-title">
         <p class="content__brand">Sneaker Company</p>
-        <h2 class="content__title">Fall Limited Edition Sneakers</h2>
+        <h2 id="product-title" class="content__title">
+          Fall Limited Edition Sneakers
+        </h2>
         <p class="content__desc">
           These low-profile sneakers are your perfect casual wear companion.
           Featuring a durable rubber outer sole, they’ll withstand everything
@@ -128,34 +187,54 @@
         </p>
         <div class="content__prices">
           <p class="content__curr">
-            $125.00 <span class="content__reduce">50%</span>
+            $125.00 <span class="content__reduce">50% off</span>
           </p>
           <p class="content__og">$250.00</p>
         </div>
         <div class="content__btns">
-          <div class="content__btns-controller">
-            <button class="content__btn">-</button>
-            <p class="content__qty">3</p>
-            <button class="content__btn">+</button>
+          <div class="content__btns-controller" aria-label="Quantity selector">
+            <button class="content__btn" aria-label="Decrease quantity">
+              -
+            </button>
+            <p class="content__qty" aria-live="polite">3</p>
+            <button class="content__btn" aria-label="Increase quantity">
+              +
+            </button>
           </div>
           <div class="content__cart-wrap">
-            <button class="content__btn-cart">Add to cart</button>
+            <button
+              id="add-to-cart-btn"
+              class="content__btn-cart"
+              aria-label="Add product to cart"
+            >
+              Add to cart
+            </button>
           </div>
         </div>
       </section>
       <!-- Product Image Modal -->
-      <section class="modal">
-        <button class="modal__close">
-          <img src="./assets/images/icon-close.svg" alt="" />
+      <section
+        class="modal"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Product image modal"
+      >
+        <button class="modal__close" aria-label="Close modal">
+          <img src="./assets/images/icon-close.svg" alt="" aria-hidden="true" />
         </button>
-        <button class="modal__prev">
-          <img src="./assets/images/icon-previous.svg" alt="" />
+        <button class="modal__prev" aria-label="Previous modal image">
+          <img
+            src="./assets/images/icon-previous.svg"
+            alt=""
+            aria-hidden="true"
+          />
         </button>
-        <img class="modal__content" src="" alt="" />
-        <button class="modal__next">
-          <img src="./assets/images/icon-next.svg" alt="" />
+        <img class="modal__content" src="" alt="Expanded product image" />
+        <button class="modal__next" aria-label="Next modal image">
+          <img src="./assets/images/icon-next.svg" alt="" aria-hidden="true" />
         </button>
       </section>
+      <div class="modal__overlay"></div>
     </main>
   </body>
 </html>
